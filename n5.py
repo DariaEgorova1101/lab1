@@ -1,7 +1,7 @@
 n = int(input('Количество слов: '))
-s=' '
+s = ' '
 word = (input('Введите слово: '))
 for el in range(n):
-    s=s+word+' '
+    s = s + word + ' '
     word = (input('Введите слово: '))
 print(s)
