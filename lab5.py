@@ -14,8 +14,6 @@ def n1(n):
 
 # n1(n=int(input('Введите число: ')))
 
-from collections import Counter
-
 
 def n2(Counter):
     l = []
@@ -42,9 +40,9 @@ def n4():
     B = ('Уваров', 'Фокин', 'Зайкина', 'Соколова', 'Миронов', 'Бобров', 'Никитин', 'Данилов', 'Лисов', 'Собакина')
     s1 = []
     s2 = []
-    for i in range(5):
-        s1.append(random.choice(A))
-        s2.append(random.choice(B))
+    for i in range(1):
+        s1 = random.sample(list(A), 5)
+        s2 = random.sample(list(B), 5)
     sport = s1 + s2
     a = tuple(sorted(sport))
     tuple(sport)
@@ -54,4 +52,4 @@ def n4():
     print('Количество человек', len(sport))
     print(a)
     print(sport.count('Иванов'))
-# n4()
+n4()
