@@ -48,4 +48,4 @@ def n3():
     )
     img.show()
     img.save(name + "_postcard.png")
-n3()
+# n3()
