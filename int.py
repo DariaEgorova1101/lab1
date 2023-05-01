@@ -59,20 +59,25 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
+
+        self.comboBox.addItems(['','Пластик', 'Алюминий', 'Соломка', 'Текстиль'])
+
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Жалюзи"))
         self.comboBox.setToolTip(_translate("MainWindow", "<html><head/><body><p><br/></p></body></html>"))
         self.bttok.setText(_translate("MainWindow", "Ок"))
         self.label.setText(_translate("MainWindow", "Ширина(см)"))
         self.label_2.setText(_translate("MainWindow", "Высота(см)"))
         self.label_3.setText(_translate("MainWindow", "Материал"))
         self.bttcl.setText(_translate("MainWindow", "Очистить"))
-def application():
-    app = QApplication(sys.argv)
-    win=Win()
-    win.show()
-    sys.exit(app.exec())
 
 
-application()
+import sys
+
+app = QtWidgets.QApplication(sys.argv)
+MainWindow = QtWidgets.QMainWindow()
+ui = Ui_MainWindow()
+ui.setupUi(MainWindow)
+MainWindow.show()
+sys.exit(app.exec())
